@@ -8,48 +8,42 @@
 /* Set a background color for the entire page */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-}
-
-/* Style the heading */
-.heading {
-  text-align: center;
-  padding: 20px;
-}
-
-.heading h1 {
-  font-size: 28px;
-  color: #333;
+  background-color: #f1f0e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 /* Center the calculator */
 .calc {
-  max-width: 300px;
-  margin: 0 auto;
+  max-width: 400px; /* Increase the max-width for a bigger calculator */
   padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  background-color: #222;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 20px; /* Increase border-radius for rounded edges */
 }
 
 /* Style the result input field */
 .result {
   width: 100%;
-  padding: 10px;
-  font-size: 24px;
+  padding: 15px;
+  font-size: 32px;
   border: none;
   outline: none;
   text-align: right;
+  background-color: #222;
+  color: white;
 }
 
 /* Style the buttons */
 button {
-  width: 50px;
-  height: 50px;
-  font-size: 18px;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
   border: none;
-  border-radius: 5px;
-  background-color: #eee;
+  border-radius: 50%;
+  background-color: #f2f2f2;
   margin: 5px;
   cursor: pointer;
   transition: background-color 0.2s;
@@ -57,31 +51,22 @@ button {
 
 /* Style the clear and operator buttons differently */
 .clear {
-  background-color: #ff6666;
+  background-color: #ff6868;
   color: white;
 }
 
 .operator {
-  background-color: #66cc66;
+  background-color: #f5923e;
   color: white;
+  padding: 0 10px; /* Add padding to operator buttons */
 }
 
-/* Add responsive styling for small screens */
-@media (max-width: 480px) {
-  .calc {
-    max-width: 100%;
-    border-radius: 0;
-  }
+/* Add hover effect to buttons */
+button:hover {
+  background-color: #d6d6d6;
+}
 
-  .btn {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  button {
-    width: 40px;
-    height: 40px;
-    font-size: 16px;
-  }
+/* Add custom styling for the "0" button */
+.num.line_5 {
+  padding: 0px 25px; /* Increase padding for the "0" button */
 }
