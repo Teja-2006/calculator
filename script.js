@@ -16,9 +16,39 @@ const allNum = document.querySelectorAll(".num");
 const dis = [];
 // * Helper function to maintain code
 const displayInput = function () {
-  result.value = dis.join(" ");
+  result.value = dis.join("");
 };
 
+// TODO: making math basic functions work.
+// * 1.Addition
+const add = function (inputs) {
+  if (inputs.length === 0) {
+    return 0; // Handle case with no inputs
+  }
+  return inputs.reduce((acc, cur) => acc + cur, 0);
+};
+// * 2.Subtraction
+const minus = function (inputs) {
+  if (inputs.length === 0) {
+    return 0; // Handle case with no inputs
+  }
+  return inputs.reduce((acc, cur) => acc - cur, 0);
+};
+
+// * 3.Multiplication
+const product = function (inputs) {
+  if (inputs.length === 0) {
+    return 0; // Handle case with no inputs
+  }
+  return inputs.reduce((acc, cur) => acc * cur, 0);
+};
+// * 4.Division
+const divide = function (inputs) {
+  if (inputs.length === 0) {
+    return 0; // Handle case with no inputs
+  }
+  return inputs.reduce((acc, cur) => acc / cur, 0);
+};
 // * event listeners
 // EVENT LISTENER FOR ADDING THE OPERATORS ON THE  INPUT NODE
 allOperators.forEach((node) =>
