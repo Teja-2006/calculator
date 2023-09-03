@@ -21,3 +21,11 @@ A simple calculator app created with the help of HTML,CSS and Javascript.
 - 👓 Readable Code: We write code that even your grandma can understand. No cryptic spells here!
 
 - ⚡ Speed Boost: Our optimized code isn't just clean; it makes your website lightning fast!
+
+Certainly! Here's an improved version of your code with some emojis:
+
+## Tools Used 🛠️
+
+- **VSCode** : Get the ultimate code editing experience! Download it [here](https://code.visualstudio.com/ "Download VSCode")
+
+- **ChatGPT** : Harness the power of GPT for creating all your CSS code! Explore ChatGPT 3.5 (while 2023) [here](https://chat.openai.com/ "OpenAI Products") 🤖✨
