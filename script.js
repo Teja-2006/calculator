@@ -1,5 +1,15 @@
 "use strict";
 // Selecting elements
+
+// * Valid if parameters
+
+
+
+
+
+
+
+console.log("🚀 ~ file: script.js:12 ~ allCheck:", allCheck)
 // * individual buttons
 const addition = document.querySelector(".add");
 const subtraction = document.querySelector(".sub");
@@ -12,12 +22,49 @@ const result = document.querySelector(".display");
 const allOperators = document.querySelectorAll(".operator");
 const allClear = document.querySelectorAll(".clear");
 const allNum = document.querySelectorAll(".num");
+
+
+
+
+
+
 // ? global variables
 const dis = [];
+
+
 // * Helper function to maintain code
 const displayInput = function () {
   result.value = dis.join("");
 };
+
+const operatorEnter = (node)=>{
+  node.addEventListener("click", function (e) {
+    dis.push(e.target.dataset.value);
+    displayInput();
+}
+  )
+}
+
+const fullClear = (node)=>{
+  node.addEventListener("click", function (e) {
+    if (e.target.dataset.value === "AC") {
+      dis.length = 0;
+      displayInput();
+    } else if (e.target.dataset.value === "C") {
+      dis.pop();
+      displayInput();
+    }
+  })
+}
+
+const numberEnter = node =>{
+  node.addEventListener("click", function (e) {
+    const num = e.target.dataset.value;
+    dis.push(num);
+    displayInput();
+  })
+}
+
 
 // TODO: making math basic functions work.
 // * 1.Addition
@@ -49,31 +96,73 @@ const divide = function (inputs) {
   }
   return inputs.reduce((acc, cur) => acc / cur, 0);
 };
-// * event listeners
+
+
+
+
+
+// * event listeners for mouse clicks
 // EVENT LISTENER FOR ADDING THE OPERATORS ON THE  INPUT NODE
+// * Reference =>  ['1','2','3','4','5','6','7','8','9','0','+','-','/','x',"*"];
 allOperators.forEach((node) =>
-  node.addEventListener("click", function (e) {
-    dis.push(e.target.dataset.value);
-    displayInput();
-  })
+  operatorEnter(node)
 );
 // EVENT LISTENER FOR CLEARING THE INPUT NODE
 allClear.forEach((node) =>
-  node.addEventListener("click", function (e) {
-    if (e.target.dataset.value === "AC") {
-      dis.length = 0;
-      displayInput();
-    } else if (e.target.dataset.value === "C") {
-      dis.pop();
-      displayInput();
-    }
-  })
+  fullClear(node)
 );
 //
 allNum.forEach((node) =>
-  node.addEventListener("click", function (e) {
-    const num = e.target.dataset.value;
-    dis.push(num);
-    displayInput();
-  })
+  numberEnter(node)
 );
+// * eventlisters for keyboard down (event)
+   
+  document.addEventListener("keydown", function (e) {
+e.preventDefault()
+    if (e.key == '1') {
+
+      dis.push(e.key)
+      displayInput();
+    }
+    if (e.key == '2') {
+
+      dis.push(e.key)
+      displayInput();
+    }if (e.key == '3') {
+
+      dis.push(e.key)
+      displayInput();
+    }if (e.key == '4') {
+
+      dis.push(e.key)
+      displayInput();
+    }if (e.key == '5') {
+
+      dis.push(e.key)
+      displayInput();
+    }if (e.key == '6') {
+
+      dis.push(e.key)
+      displayInput();
+    }
+    if (e.key == '7') {
+
+      dis.push(e.key)
+      displayInput();
+    }
+    if (e.key == '8') {
+
+      dis.push(e.key)
+      displayInput();
+    }
+    if (e.key == '9') {
+
+      dis.push(e.key)
+      displayInput();
+    }
+    if (e.key == '0') {
+
+      dis.push(e.key)
+      displayInput();
+    }
+    });
