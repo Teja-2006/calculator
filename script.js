@@ -186,3 +186,5 @@ document.addEventListener("keydown", function (e) {
     displayInput();
   }
 });
+
+// TODO : Ab aiyaga asli maza From now starts the real functionality of the calculator website 😎

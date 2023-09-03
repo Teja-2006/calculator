@@ -29,3 +29,11 @@ Certainly! Here's an improved version of your code with some emojis:
 - **VSCode** : Get the ultimate code editing experience! Download it [here](https://code.visualstudio.com/ "Download VSCode")
 
 - **ChatGPT** : Harness the power of GPT for creating all your CSS code! Explore ChatGPT 3.5 (while 2023) [here](https://chat.openai.com/ "OpenAI Products") 🤖✨
+
+## Clone Repository
+
+You can clone this repository using the following command:
+
+```bash
+git clone https://github.com/Teja-2006/calculator
+```
