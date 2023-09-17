@@ -1,6 +1,5 @@
 "use strict";
 // Selecting elements
-// * Valid if parameters
 
 // * individual buttons
 const addition = document.querySelector(".add");
@@ -14,9 +13,8 @@ const result = document.querySelector(".display");
 const allOperators = document.querySelectorAll(".operator");
 const allClear = document.querySelectorAll(".clear");
 const allNum = document.querySelectorAll(".num");
-
-// ? global variables
-const dis = [];
+const submit = document.querySelector(".submit");
+const dis = []; // <= the array which contains all the values pleased in the input box.
 
 // * Helper function to maintain code
 const displayInput = function () {
@@ -57,8 +55,14 @@ const keydownNumFun = (number, e) => {
   }
 };
 
+// * Submit functionality
+submit.addEventListener("click", function (e) {
+  e.preventDefault();
+  mainFun(dis);
+});
+
 // TODO: making math basic functions work.
-// * 1.Addition
+// *Addition
 const add = function (inputs) {
   if (inputs.length === 0) {
     return 0; // Handle case with no inputs
@@ -98,7 +102,7 @@ allNum.forEach((node) => numberEnter(node));
 // * eventlisters for keyboard down (event)
 
 document.addEventListener("keydown", function (e) {
-  e.preventDefault();
+  // e.preventDefault();
   // Number will be added to the result area in the calculator
   if (e.key === "0") {
     dis.push(e.key);
@@ -145,7 +149,7 @@ document.addEventListener("keydown", function (e) {
     displayInput();
   }
   //  Deletion of one number function
-  console.log(e);
+  // console.log(e);
   if (e.key === "Backspace") {
     dis.pop();
     displayInput();
@@ -185,6 +189,12 @@ document.addEventListener("keydown", function (e) {
     dis.push(e.key);
     displayInput();
   }
+  if (e.key === "Enter" || e.key === "=") {
+    mainFun(dis);
+  }
 });
 
 // TODO : Ab aiyaga asli maza From now starts the real functionality of the calculator website 😎
+function mainFun(arr) {
+  const slipted_arr = arr.map((element) => element);
+}

@@ -36,6 +36,13 @@ body {
   color: white;
 }
 
+input[type="text"] {
+  color: transparent;
+  text-shadow: 0 0 0 white;
+}
+input[type="text"]:focus {
+  outline: none;
+}
 /* Style the buttons */
 button {
   width: 60px;
@@ -61,6 +68,12 @@ button {
   padding: 0 10px; /* Add padding to operator buttons */
 }
 
+.submit {
+  background-color: #f5923e;
+  color: white;
+  padding: 0 10px; /* Add padding to operator buttons */
+}
+
 /* Add hover effect to buttons */
 button:hover {
   background-color: #d6d6d6;
@@ -69,4 +82,38 @@ button:hover {
 /* Add custom styling for the "0" button */
 .num.line_5 {
   padding: 0px 25px; /* Increase padding for the "0" button */
+}
+/* Style for the cloud container */
+.cloud {
+  background-color: #f0f0f0; /* Light gray background color */
+  border-radius: 50px; /* Rounded corners for a cloud-like shape */
+  padding: 20px; /* Add padding for spacing */
+  position: relative; /* Position relative for absolute positioning of text */
+  overflow: hidden; /* Hide overflowing content */
+  width: 300px; /* Adjust the width as needed */
+  margin: 20px auto; /* Center the cloud horizontally */
+}
+
+/* Style for the fading text message */
+.msg {
+  animation: fade 4s infinite; /* Apply the fade animation */
+  position: absolute; /* Position absolute for text positioning */
+  top: 50%; /* Position text in the middle vertically */
+  left: 50%; /* Position text in the middle horizontally */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Center text both vertically and horizontally */
+  text-align: center; /* Center-align text */
+}
+
+/* Keyframes for the fade animation */
+@keyframes fade {
+  0%,
+  100% {
+    opacity: 0.4; /* Start and end with low opacity */
+  }
+  50% {
+    opacity: 1; /* Middle of the animation with full opacity */
+  }
 }

@@ -1,0 +1,12 @@
+PLANNING FOR THE MAIN FUNCTIONALITY OF THE CALCULATOR APP.
+
+Now my plan for making the main function for my calculator app is to =>
+
+-> Make a function that takes an array as an input.
+
+-> Split the array using the operator symbol like (+,-,*,/ etc.) and make a new array
+   ->Lets not break the array using map.
+   ->lets make a array with the help of map
+
+-> And call custom methods created to perform the desired task.
+ 
